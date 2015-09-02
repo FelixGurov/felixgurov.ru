@@ -1,0 +1,379 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, .nav, output, ruby, section, summary, time, mark, audio, video { margin: 0;	padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, .nav, section { display: block; } ol, ul { list-style: none; } .cf:before, .cf:after { content: " "; display: table; } .cf:after {clear: both;} .cf { *zoom: 1; } img { max-width: 100%; height: auto; vertical-align: middle; }
+
+body {
+    background: #efefef;
+	color: #353430;
+	font: 400 1em/1.5em Georgia, serif;
+}
+
+.home {
+	background: #07bceb url(images/bg.jpg) fixed no-repeat center 115px;
+}
+
+/*----------------------------------------------------------
+    LAYOUT
+----------------------------------------------------------*/
+
+.header, section, footer {
+	position: relative;
+	z-index: 99; /*????????????????????*/
+}
+
+.wrapper {
+    position: relative;
+	width: 92%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.header {
+	background: #fff;
+	padding: 12px 0;
+}
+
+.hero {
+	padding: 105px 0 118px;
+	color: #fff;
+	background: transparent;
+	box-shadow: inset 0 0.5em 1em rgba(0,0,0,0.05);
+}
+
+.grid {
+	padding: 48px 0 32px;
+	background: #fff;
+}
+
+.footer {
+	background: #efefef;
+	box-shadow: inset 0 0.5em 1em rgba(0,0,0,0.05);
+	color: #252525;
+	text-align: center;
+}
+
+.footer .wrapper {
+	padding: 32px 0 18px 0;
+}
+
+/*--------------------------------------------------------
+    TYPE
+--------------------------------------------------------*/
+
+h1,h2,h3,h4,h5 {
+	font-weight: 700;
+	line-height: 1em; /* ??????????????????? em ??????*/
+}
+
+h1 {
+    margin-bottom: 16px;
+	font: 700 98px/1em 'Philosopher', 'Helvetica', arial, sans-serif;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font: 700 30px/1em 'Philosopher', 'Helvetica', arial, sans-serif;
+}
+
+h4 {
+	margin-bottom: 4px;
+	font-size: 22px;
+}
+
+p {
+	margin-bottom: 32px;
+	font-size: 20px;
+	line-height: 1.6em; /*  prosto postavil tut znack ;  */
+}
+
+a {
+	color: #353430;
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+	outline: none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+	color: #353430;
+	border-bottom: 1px solid #ffa302;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 22px;
+	border-bottom: none;
+	border-radius: 5px;
+	color: #fff;
+	font-family: 'Philosopher', 'Helvetica', arial, sans-serif;
+	font-size: 30px;
+	line-height: 1em;
+	font-weight: 500;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+	background: #ff9102;
+}
+
+.btn:hover {
+	background: #ffa302;
+	color: #fff;
+	border-bottom: none;
+}
+
+/*--------------------------------------------------------
+    HEADER
+--------------------------------------------------------*/
+
+.logo {
+	position: relative;
+	float: left;
+	border: none;
+}
+
+.logo:hover {
+    border: none;
+}
+
+.logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+}
+
+.logo h1 {
+    margin-bottom: 0;
+	padding-left: 100px;
+	font-size: 55px;
+	line-height: 80px; /* nuzno li zdes EM */
+}
+
+.nav {
+	position: relative;
+	float: right;
+}
+
+.nav a {
+	margin-left: 62px;
+	font-size: 20px;
+	line-height: 80px; /* nuzno li zdes EM */
+}
+
+.nav a:first-of-type {
+	margin-left: 0;
+}
+
+.nav div {
+	position: absolute;
+	top: 26px;
+	right: 109px;
+	width: 1px;
+	height: 30px;
+	background: #333;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+/*-------------------------------------------------------
+    HERO
+-------------------------------------------------------*/
+
+.hero {
+	text-align: center;
+}
+
+.hero h1 {
+	margin-bottom: 0.25em;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+	font-weight: 400;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.hero p {
+	margin-bottom: 0;
+	font-size: 1em;
+}
+
+/*--------------------------------------------------------
+    HOME
+--------------------------------------------------------*/
+
+.thumbs li {
+	float: left;
+	width: 30%;
+	margin: 1.5em 5% 1.5em 0;
+	text-align: center;
+}
+
+.thumbs li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.thumbs li:nth-child(3n+1) {
+	clear: left;
+}
+
+.thumbs a {
+	display: block;
+	border: none;
+}
+
+.thumbs a:hover {
+	border: none;
+	color: #f75728;
+}
+
+.thumbs .thumb {
+	margin-bottom: 1em;
+}
+
+/*--------------------------------------------------------
+    ABOUT
+--------------------------------------------------------*/
+
+.about {
+	padding: 2.625em 0;
+	background: transparent;
+	color: #fff;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+	text-align: left;
+}
+
+.about .wrapper {
+	max-width: 570px;
+	margin: 2.625em auto;
+	padding: 0.5em 32px 28px;
+	background: rgba(0,0,0,0.75);
+	border-radius: 3px;
+}
+
+.about h3 {
+	margin: 0.5em 0;
+	font-size: 36px;
+}
+
+.about p {
+	margin-bottom: 0;
+	text-indent: 40px;
+}
+
+.about p:first-of-type {
+    text-indent: 0;
+}
+
+/*--------------------------------------------------------
+    BOTTOM
+--------------------------------------------------------*/
+
+.bottom {
+	padding: 32px 0;
+	background: #fff;
+	text-align: center;
+}
+
+.bottom p {
+	margin-bottom: 0;
+	font-size: 36px;
+}
+
+.bottom .btn {
+	margin-left: 32px;
+	font-size: 36px;
+}
+
+/*--------------------------------------------------------
+    FOOTER
+--------------------------------------------------------*/
+
+.footer p  {
+    color: #898989;
+	margin-bottom: 0.875em;
+}
+
+.footer a {
+    color: #898989;
+	border: none;
+}
+
+.footer a:hover {
+	border: none;
+}
+
+/*--------------------------------------------------------
+    MQS
+--------------------------------------------------------*/
+
+@media all and (min-width: 1100px) {
+    .logo img {	-webkit-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; -ms-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; }
+    .logo:hover img { top: -2px; left: -2px; width: 84px; }
+}
+
+@media all and (max-width: 1040px) {
+    .about { background: #07bceb; }
+}
+
+@media all and (max-width: 1010px) {
+    .bottom p { font-size: 32px; }
+    .bottom .btn { font-size: 32px; }
+}
+
+@media all and (max-width: 910px) {
+    .bottom { padding-top: 26px; }
+    .bottom .btn { margin: 0.25em 1em 0; }
+}
+
+@media all and (max-width: 800px) {
+	.logo h1 { font-size: 40px; }
+	.hero h2 { padding: 0 10%; line-height: 1.2em; }
+	.thumbs li { width: 47.5%; margin: 0 5% 0.75em 0; }
+	.thumbs li:nth-child(3n) { margin-right: 5%; }
+	.thumbs li:nth-child(2n) { margin-right: 0; }
+	.thumbs li:nth-child(3n+1) { clear: none; }
+	.thumbs li:nth-child(2n+1) { clear: left; }
+}
+
+@media all and (max-width: 710px) {
+	.logo { width: auto; }
+	.logo img { position: static; top: auto; left: auto; width: 64px; }
+	.logo h1 { display: none; }
+	.nav a { font-size: 20px; line-height: 64px; margin-left: 35px;}
+	.nav div { top: 18px; right: 95px; }
+	.hero { padding: 2.625em 0; }
+    .bottom p { font-size: 30px; line-height: 1.2em; }
+    .bottom .btn { margin-top: 0.5em; }
+}
+
+@media all and (max-width: 640px) {
+    .home { background-size: auto 600px; }
+	.hero h1 { font-size: 48px; }
+	.hero h2 { font-size: 27px; }
+    .bottom .btn { display: block; margin: 0.5em 0 0; }
+	.about .wrapper { margin: 0 auto; padding: 0 24px 20px; }
+}
+
+@media all and (max-width: 500px) {
+    .wrapper { width: 90%; }
+    p { font-size: 18px; }
+    .hero { padding: 32px 0; }
+	.logo { width: 5em; }
+	.grid { padding-top: 32px; }
+	.thumbs li { width: 100%; margin: 0 0 1.25em 0; }
+	.thumbs li:nth-child(3n) { margin-right: 0; }
+	.thumbs li:nth-child(2n+1) { clear: none; }
+	.thumbs li:last-child { margin-bottom: 0; }
+    .thumbs .thumb { max-width: 360px; margin: 0 auto 1em; padding: 0 5%; }
+	.hero h1 { font-size: 40px; }
+	.hero h2 { font-size: 22px; padding: 0 5%; }
+	.about h3 { font-size: 32px; margin-bottom: 0.25em; }
+}
+
+
+
+
